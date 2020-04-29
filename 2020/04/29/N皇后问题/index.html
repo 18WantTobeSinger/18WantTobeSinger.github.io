@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="利用位运算来解决八皇后问题问题： ​         在 8×8 格的国际象棋上摆放八个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法 ？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="N皇后问题">
+<meta property="og:url" content="http://yoursite.com/2020/04/29/N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="✌">
+<meta property="og:description" content="利用位运算来解决八皇后问题问题： ​         在 8×8 格的国际象棋上摆放八个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法 ？">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.leetcode-cn.com/d6a6a803a674f2082c80cbafde5fa65b47b2bee2e8e8f136aa7cc20221cda3b7-file_1585149229633">
+<meta property="og:image" content="https://pic.leetcode-cn.com/8c1f73e29ff8c4fb97a86bd8d5c4676e38861f4a8ffb85e566ec96e6c8e76fa6-file_1585149229649">
+<meta property="og:image" content="https://pic.leetcode-cn.com/61c4d86c51de7d942dac183c21a76821a1a1709d2b3ddad9f48b9fe778064488-file_1585149229646">
+<meta property="og:image" content="https://pic.leetcode-cn.com/1b5ea0a78600a35dff563168e900392194f91fec39901d505c3d77c8ddfd1c40-file_1585351883264">
+<meta property="article:published_time" content="2020-04-29T13:42:10.000Z">
+<meta property="article:modified_time" content="2020-04-29T14:06:13.713Z">
+<meta property="article:author" content="给生活比个耶！">
+<meta property="article:tag" content="Bit Manipulation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.leetcode-cn.com/d6a6a803a674f2082c80cbafde5fa65b47b2bee2e8e8f136aa7cc20221cda3b7-file_1585149229633">
+
+<link rel="canonical" href="http://yoursite.com/2020/04/29/N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>N皇后问题 | ✌</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">✌</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录学习历程</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/29/N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/headImg.jpg">
+      <meta itemprop="name" content="给生活比个耶！">
+      <meta itemprop="description" content="菜鸡要努力">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="✌">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          N皇后问题
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-29 21:42:10 / 修改时间：22:06:13" itemprop="dateCreated datePublished" datetime="2020-04-29T21:42:10+08:00">2020-04-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="利用位运算来解决八皇后问题"><a href="#利用位运算来解决八皇后问题" class="headerlink" title="利用位运算来解决八皇后问题"></a>利用位运算来解决八皇后问题</h3><p>问题：</p>
+<p>​         在 8×8 格的国际象棋上摆放八个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法 ？</p>
+<a id="more"></a>
+
+<p>举个栗子：</p>
+<p>​         如果在棋盘上放置一个皇后，则与这个皇后同一行，同一列，且皇后所在斜线经过的格子不能再放其他皇后。 </p>
+<p> <img src="https://pic.leetcode-cn.com/d6a6a803a674f2082c80cbafde5fa65b47b2bee2e8e8f136aa7cc20221cda3b7-file_1585149229633" alt="img"> </p>
+<p> 如图示，在其中任意一行放置一个皇后，则与此皇后同行，同列，同对角线的都不允许再放其他皇后，图中蓝色区块不允许放其他皇后。 </p>
+<h4 id="那怎么使用位运算来解这道题呢？"><a href="#那怎么使用位运算来解这道题呢？" class="headerlink" title="那怎么使用位运算来解这道题呢？"></a>那怎么使用位运算来解这道题呢？</h4><p>假设我们要求解第三行可放皇后的格子（说明一二行的皇后已放好了）那么第三行可放皇后的位置受到哪些条件的限制呢。显然在第一二行已放皇后的格子所在的列，左斜线，右斜线对应的方格都不能放皇后，如图示:</p>
+<p> <img src="https://pic.leetcode-cn.com/8c1f73e29ff8c4fb97a86bd8d5c4676e38861f4a8ffb85e566ec96e6c8e76fa6-file_1585149229649" alt="img"> </p>
+<p>我们以 column 来记录所有上方行已放置的皇后导致当前行格子不可用的集合，所在列如果放了皇后，则当前行格子对应的位置为 1，否则为 0，同理,以 pie（撇，左斜线） 记录所有已放置的皇后左斜方向导致当前行格子不可用的集合， na（捺，右斜线） 表示所有已放置的皇后右斜方向导致当前行不可用的集合。则对于第三行来说我们有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">column &#x3D; 10010000 (上图中的第一个图，第 1，4 列放了皇后，所以 1，4 位置为 1，其他位置为 0）</span><br><span class="line">pie &#x3D; 00100000 (上图中的第二个图，左斜线经过第三行的第三个方格，所以第三位为 1）</span><br><span class="line">na &#x3D; 00101000 (上图中的第三个图，右斜线经过第三行的第三, 五个方格，所以第三,五位为 1）</span><br></pre></td></tr></table></figure>
+
+<p> 将这三个变量作<strong>或运算</strong>得到结果如下 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="number">10010000</span></span><br><span class="line">|   <span class="number">00100000</span></span><br><span class="line">|   <span class="number">00101000</span></span><br><span class="line">-----------------------</span><br><span class="line">    <span class="number">10111000</span></span><br></pre></td></tr></table></figure>
+
+<p> 也就是说对于第三层来说第 1，3，4，5 个格子不能放皇后。如图示 </p>
+<p> <img src="https://pic.leetcode-cn.com/61c4d86c51de7d942dac183c21a76821a1a1709d2b3ddad9f48b9fe778064488-file_1585149229646" alt="img"> </p>
+<p>于是可知 column | pie | na 得到的结果中值为 0 的代表当前行对应的格子可放皇后， 1 代表不能放，但我们想改成 1 代表格子可放皇后， 0 代表不可放皇后，毕竟这样更符合我们的思维方式，怎么办，取反不就行了，于是我们有~(column| pie | na)。</p>
+<p>问题来了，这样取反是有问题的，因为这三个变量都是定义的 int 型，为 32 位，取反之后高位的 0 全部变成了 1，而我们只想保留低 8 位（因为是 8 皇后），想把高位都置为 0，怎么办，这里就要用到位运算的黑科技了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~(column | pie | na) &amp; ((<span class="number">1</span> &lt;&lt; <span class="number">8</span>)-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>后面的的 ((1&lt;&lt; 8) -1) 表示先把 1 往左移 8 位，值为 100000000,再减 1 ，则低 8 位全部为 1，高位全部为 0！（即 0011111111）再作与应用，即可保留低 8 位，去除高位。</p>
+<p>费了这么大的劲，我们终于把当前行可放皇后的格子都找出来了（所有位值为 1 的格子可放置皇后）。接下来我们只要做个循环，遍历所有位为 1 的格子，每次取出可用格子放上皇后，再找下一层可放置皇后的格子，依此递归下去即可,直接所有行都遍历完毕。</p>
+<p> 于是现在问题转化为了已知当前行的 columne，pie，na，怎么确定下一行可放置皇后的格子呢。 </p>
+<p>上文可知，我们已经选出了当前行可用的格子（相应位为 1 对应的格子可用），假设我们在当前行选择了其中一个格子来放置皇后，此位置记为 p（如果是当前行的最后一个格子最后一个格子，则值为 1，如果放在倒数第二个，值为 10，倒数第三个则为 100，依此类推），则对于下一行来说，显然 column = column | p</p>
+<p>那么 pie 呢，仔细看下图，显然应该为 (pie | p) &lt;&lt; 1, 左斜线往下一行的格子延展时，相当于左移一位，</p>
+<p> <img src="https://pic.leetcode-cn.com/1b5ea0a78600a35dff563168e900392194f91fec39901d505c3d77c8ddfd1c40-file_1585351883264" alt="img"> </p>
+<p> <strong>如图示：下一行的 pie 显然为 (pie | p) &lt;&lt; 1。</strong> </p>
+<p>同理 下一行的 na 应该为 (na | p) &gt;&gt; 1</p>
+<p>有了以上详细地解析，我们就可以写出伪代码了:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">queenSettle</span><span class="params">(row, col,pie,na)</span> </span>&#123;</span><br><span class="line">	N = <span class="number">8</span>; <span class="comment">// 8皇后</span></span><br><span class="line">	<span class="keyword">if</span> (row &gt;= N) &#123;</span><br><span class="line">		<span class="comment">// 遍历到最后一行说明已经找到符合的条件了</span></span><br><span class="line">		count++;<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 取出当前行可放置皇后的格子</span></span><br><span class="line">	bits = (~(col|pie|na)) &amp; ((<span class="number">1</span> &lt;&lt; N)-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(bits &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 每次从当前行可用的格子中取出最右边位为 1 的格子放置皇后</span></span><br><span class="line">		p = bits &amp; -bits</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 紧接着在下一行继续放皇后</span></span><br><span class="line">		queenSettle(row+<span class="number">1</span>, col | p, (pie|p) &lt;&lt; <span class="number">1</span>, (na | p) &gt;&gt; <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 当前行最右边格子已经选完了，将其置成 0，代表这个格子已遍历过</span></span><br><span class="line">		bits = bits &amp; (bits-<span class="number">1</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> 一开始传入 queenSettle(0,0,0,0) 这样即可得到最终的解。</p>
+<p><strong>在LeetCode第52题：N皇后 II</strong>：</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">totalNQueens</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        dfs(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,n);</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col, <span class="keyword">int</span> pie, <span class="keyword">int</span> na, <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(row &gt;= n) &#123;</span><br><span class="line">            count ++;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> bit = (~(col | pie | na)) &amp; ((<span class="number">1</span> &lt;&lt; n)-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">while</span>(bit != <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> p = bit &amp; -bit;</span><br><span class="line">            dfs(row + <span class="number">1</span>, col | p, (pie | p) &lt;&lt; <span class="number">1</span>, (na | p) &gt;&gt; <span class="number">1</span>, n);</span><br><span class="line">            bit = bit &amp; (bit - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Bit-Manipulation/" rel="tag"># Bit Manipulation</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/28/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E9%AA%9A%E6%93%8D%E4%BD%9C/" rel="prev" title="位运算的一些骚操作">
+      <i class="fa fa-chevron-left"></i> 位运算的一些骚操作
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用位运算来解决八皇后问题"><span class="nav-number">1.</span> <span class="nav-text">利用位运算来解决八皇后问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#那怎么使用位运算来解这道题呢？"><span class="nav-number">1.1.</span> <span class="nav-text">那怎么使用位运算来解这道题呢？</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="给生活比个耶！"
+      src="/images/headImg.jpg">
+  <p class="site-author-name" itemprop="name">给生活比个耶！</p>
+  <div class="site-description" itemprop="description">菜鸡要努力</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/18WantTobeSinger" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;18WantTobeSinger" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">给生活比个耶！</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
