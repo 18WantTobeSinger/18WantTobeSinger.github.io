@@ -203,7 +203,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-05-14 18:40:12 / 修改时间：20:45:21" itemprop="dateCreated datePublished" datetime="2020-05-14T18:40:12+08:00">2020-05-14</time>
+              <time title="创建时间：2020-05-14 18:40:12 / 修改时间：20:51:03" itemprop="dateCreated datePublished" datetime="2020-05-14T18:40:12+08:00">2020-05-14</time>
             </span>
 
           
@@ -217,20 +217,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<h5 id="什么是逆波兰表达式-又叫-‘后缀表达式’-？先来看个实例"><a href="#什么是逆波兰表达式-又叫-‘后缀表达式’-？先来看个实例" class="headerlink" title="什么是逆波兰表达式(又叫 ‘后缀表达式’ )？先来看个实例"></a>什么是逆波兰表达式(又叫 ‘后缀表达式’ )？先来看个实例</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>! <span class="number">1</span> + <span class="number">23</span>! <span class="number">4</span> - <span class="number">5</span> ^ - <span class="number">67</span> * - <span class="number">8</span> - <span class="number">9</span> +</span><br></pre></td></tr></table></figure>
-
-<p>如果你是刚接触，肯定是看不懂的，看懂的另说。这里我们可以使用一个栈来进行运算。</p>
-<p><strong>思路</strong>：当我们遇到操作数的时候就读取将其入栈，每当遇到一个操作符就从栈顶取出操作数进行运算，最后将其结果入栈，就这么简单…</p>
-<p><em>你可以先模拟一个栈，将这个实例计算出来，最下面会给出*</em>答案***</p>
-<hr>
-<p>算法：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">evaluate</span><span class="params">( <span class="keyword">char</span>* S, <span class="keyword">char</span>* &amp; RPN)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>( !optr.empty() )&#123;</span><br><span class="line">        <span class="keyword">if</span> ( isDigit(*S) ) &#123;</span><br><span class="line">            readNumber(S, opnd);</span><br><span class="line">            append(RPN, opnd.top());</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">switch</span>( orderBetween( optr.top(), *S )) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'&gt;'</span>: &#123;</span><br><span class="line">                    <span class="keyword">char</span> op = optr.pop(); append(RPN, op);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>还没有完成！有待更新……</p>
-<p><em>答案：2013</em></p>
-
+          <h5 id="什么是逆波兰表达式-又叫-‘后缀表达式’-？先来看个实例"><a href="#什么是逆波兰表达式-又叫-‘后缀表达式’-？先来看个实例" class="headerlink" title="什么是逆波兰表达式(又叫 ‘后缀表达式’ )？先来看个实例"></a>什么是逆波兰表达式(又叫 ‘后缀表达式’ )？先来看个实例</h5>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/14/%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -274,7 +269,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-05-14 17:35:16 / 修改时间：18:43:07" itemprop="dateCreated datePublished" datetime="2020-05-14T17:35:16+08:00">2020-05-14</time>
+              <time title="创建时间：2020-05-14 17:35:16 / 修改时间：20:51:15" itemprop="dateCreated datePublished" datetime="2020-05-14T17:35:16+08:00">2020-05-14</time>
             </span>
 
           
@@ -288,24 +283,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<p>该算法使用C++实现，只列出该算法的总体框架。</p>
-<p>首先为了计算各种运算符之间的优先等级，这里我们使用二维表<strong>（超级重要！）</strong>来记录：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// pri[栈顶][当前]</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> pri[N_OPTR][N_OPTR] = &#123;</span><br><span class="line">    <span class="comment">//		  |------------------当前运算符------------------|</span></span><br><span class="line">    <span class="comment">//			 +	  -	   *	/	 ^	  !	   (	)	\0</span></span><br><span class="line">    <span class="comment">/* |  + */</span> &#123;<span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>&#125;,</span><br><span class="line">    <span class="comment">/* |  - */</span> &#123;<span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>&#125;,</span><br><span class="line">    <span class="comment">/* |  * */</span> &#123;<span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>&#125;,</span><br><span class="line">    <span class="comment">/* |  / */</span> &#123;<span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>&#125;,</span><br><span class="line">    <span class="comment">/* |  ^ */</span> &#123;<span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>&#125;,</span><br><span class="line">    <span class="comment">/* |  ! */</span> &#123;<span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>, <span class="string">' '</span>, <span class="string">'&gt;'</span>, <span class="string">'&gt;'</span>&#125;,</span><br><span class="line">    <span class="comment">/* |  ( */</span> &#123;<span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'='</span>, <span class="string">' '</span>&#125;,</span><br><span class="line">    <span class="comment">/* |  ) */</span> &#123;<span class="string">' '</span>, <span class="string">' '</span>, <span class="string">' '</span>, <span class="string">' '</span>, <span class="string">' '</span>, <span class="string">' '</span>, <span class="string">' '</span>, <span class="string">' '</span>, <span class="string">' '</span>&#125;,</span><br><span class="line">    <span class="comment">/* | \0 */</span> &#123;<span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">'&lt;'</span>, <span class="string">' '</span>, <span class="string">'='</span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里我们使用两个栈分别来存运算数和运算符</p>
-<p><strong>实现主算法：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">evaluate</span><span class="params">( <span class="keyword">char</span>* S, <span class="keyword">char</span>* &amp;RPN)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 运算数栈、运算符栈</span></span><br><span class="line">    Stack&lt;<span class="keyword">float</span>&gt; opnd; Stack&lt;<span class="keyword">char</span>&gt; optr;</span><br><span class="line">    <span class="comment">// 尾哨兵'\0'也作为头哨兵首先入栈</span></span><br><span class="line">    optr.push(<span class="string">'\0'</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 逐个处理各字符，直至运算符栈为空</span></span><br><span class="line">    <span class="keyword">while</span>( !optr.empty() ) &#123;</span><br><span class="line">        <span class="comment">// 如果遇到数字(操作数可能不止一位)，直接读取操作数并入栈</span></span><br><span class="line">        <span class="keyword">if</span>( isDigit( *S )) </span><br><span class="line">            readNumber( S, opnd);</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            <span class="comment">// 如果当前读到了运算符，则与栈顶运算符比较优先级的高低分别处理</span></span><br><span class="line">            <span class="keyword">switch</span>( orderBetween( optr.top(), *S )) &#123; ... &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 弹出最后的计算结果</span></span><br><span class="line">    <span class="keyword">return</span> opnd.pop();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>这里来根据不同优先级处理方法：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>( orderBetween( optr.top(), *S ) ) &#123;</span><br><span class="line">    <span class="comment">// 栈顶运算符优先级更低</span></span><br><span class="line">    <span class="keyword">case</span> <span class="string">'&lt;'</span>:</span><br><span class="line">        <span class="comment">// 计算延迟，将当前运算符进栈</span></span><br><span class="line">        optr.push( *S ); S ++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="comment">// 优先级相等（当前运算符为右括号或者尾部哨兵'\0'）</span></span><br><span class="line">    <span class="keyword">case</span> <span class="string">'='</span>:</span><br><span class="line">        <span class="comment">// 脱括号并接收下一个字符</span></span><br><span class="line">        optr.pop(); S ++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="comment">// 实施相应的计算，并将结果入栈</span></span><br><span class="line">    <span class="keyword">case</span> <span class="string">'&gt;'</span>: &#123;</span><br><span class="line">        <span class="keyword">char</span> op = optr.pop();</span><br><span class="line">        <span class="comment">// 计算运算数栈顶部数字的阶乘，并入栈</span></span><br><span class="line">        <span class="keyword">if</span> ( <span class="string">'!'</span> == op ) opnd.push( calcu( op, opnd.pop() ) );</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">float</span> pOpnd2 = opnd.pop(), pOpnd1 = opnd.pop();</span><br><span class="line">            opnd.push( calcu( pOpnd1, op, pOpnd2 ) );</span><br><span class="line">            </span><br><span class="line">            <span class="comment">/* 以上两行操作不可以使用以下方式 */</span></span><br><span class="line">            <span class="comment">// opnd.push( calcu( opnd.pop(), op, opnd.pop() ));</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>实例：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这里的 $ 就是 \0, 表示结尾符号</span></span><br><span class="line">(<span class="number">1</span> + <span class="number">2</span>^<span class="number">3</span>! - <span class="number">4</span>) * (<span class="number">5</span>! - (<span class="number">6</span> - (<span class="number">7</span> - (<span class="number">89</span> - <span class="number">0</span>!))))$</span><br></pre></td></tr></table></figure>
-
-<p>结果：2013</p>
-
+          <p>该算法使用C++实现，只列出该算法的总体框架。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/14/%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
