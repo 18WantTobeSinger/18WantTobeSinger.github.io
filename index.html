@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="菜鸡要努力">
@@ -188,17 +188,10 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-06-13 17:19:33 / 修改时间：17:55:16" itemprop="dateCreated datePublished" datetime="2020-06-13T17:19:33+08:00">2020-06-13</time>
+              <time title="创建时间：2020-06-13 17:19:33 / 修改时间：18:00:47" itemprop="dateCreated datePublished" datetime="2020-06-13T17:19:33+08:00">2020-06-13</time>
             </span>
 
           
-            <span id="/2020/06/13/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="post-meta-item leancloud_visitors" data-flag-title="抽象工厂模式" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
 
         </div>
       </header>
@@ -210,61 +203,14 @@
 
       
           <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请优先考虑那个优先考虑你的人。</span><br><span class="line"></span><br><span class="line">                                                                        ----- 网易云热评</span><br></pre></td></tr></table></figure>
-
-<h2 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h2><h3 id="“对象创建”-模式"><a href="#“对象创建”-模式" class="headerlink" title="“对象创建” 模式"></a>“对象创建” 模式</h3><ul>
-<li>通过“对象创建” 模式绕开new，来避免对象创建（new）过程 中所导致的紧耦合（依赖具体类），从而支持对象创建的稳定。它 是接口抽象之后的第一步工作。 </li>
-<li>典型模式<ul>
-<li>Factory Method</li>
-<li>Abstract Factory</li>
-<li>Prototype</li>
-<li>Builder  </li>
-</ul>
-</li>
-</ul>
-<h3 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h3><ul>
-<li>在软件系统中，经常面临着“<strong>一系列相互依赖的对象</strong>”的创建工 作；同时，由于需求的变化，往往存在更多系列对象的创建工作。 </li>
-<li>如何应对这种变化？如何绕过常规的对象创建方法(new)，提供一 种“封装机制”来避免客户程序和这种“多系列具体对象创建工作” 的紧耦合？ </li>
-</ul>
-<h3 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h3><p> 提供一个接口，让该接口负责创建<strong>一系列“相关或者相互依 赖的对象”</strong>，无需指定它们具体的类。 </p>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><p>根据不同的数据库版本创建不同的数据库连接；如：SQL Server、Mysql、Oracle等等。</p>
-<p><strong>基础代码：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EmployeeDAO</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;EmployeeDO&gt; <span class="title">GetEmployees</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// 创建连接</span></span><br><span class="line">        SqlConnection* connection = <span class="keyword">new</span> SqlConnection();</span><br><span class="line">        connection-&gt;ConnectionString = <span class="string">"..."</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 植入sql</span></span><br><span class="line">        SqlCommand* command = <span class="keyword">new</span> SqlCommand();</span><br><span class="line">        command-&gt;CommandText=<span class="string">"..."</span>;</span><br><span class="line">        command-&gt;SetConnection(connection);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 执行</span></span><br><span class="line">        SqlDataReader* reader = command-&gt;ExecuteReader();</span><br><span class="line">        <span class="keyword">while</span> (reader-&gt;Read())&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>根据工厂方法模式，我们可以按照工厂方法模式来写，给每一种操作定义基类，然后使用相应的工厂类去创建他们：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据库访问有关的基类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IDBConnection</span>&#123;</span></span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IDBCommand</span>&#123;</span></span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IDataReader</span>&#123;</span></span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IDBConnectionFactory</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDBConnection* <span class="title">CreateDBConnection</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IDBCommandFactory</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDBCommand* <span class="title">CreateDBCommand</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IDataReaderFactory</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDataReader* <span class="title">CreateDataReader</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>接下来我们编写支持不同平台的实现：</p>
-<p>以下支持SQL Server</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlConnection</span>:</span> <span class="keyword">public</span> IDBConnection&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlConnectionFactory</span>:</span><span class="keyword">public</span> IDBConnectionFactory&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlCommand</span>:</span> <span class="keyword">public</span> IDBCommand&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlCommandFactory</span>:</span><span class="keyword">public</span> IDBCommandFactory&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlDataReader</span>:</span> <span class="keyword">public</span> IDataReader&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlDataReaderFactory</span>:</span><span class="keyword">public</span> IDataReaderFactory&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>以下支持Oracle</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleConnection</span>:</span> <span class="keyword">public</span> IDBConnection&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleConnectionFactory</span>:</span><span class="keyword">public</span> IDBConnectionFactory&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleCommand</span>:</span> <span class="keyword">public</span> IDBCommand&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleCommandFactory</span>:</span><span class="keyword">public</span> IDBCommandFactory&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleDataReader</span>:</span> <span class="keyword">public</span> IDataReader&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleDataReaderFactory</span>:</span><span class="keyword">public</span> IDataReaderFactory&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>创建连接实例：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EmployeeDAO</span>&#123;</span></span><br><span class="line">    IDBConnectionFactory* dbConnectionFactory;</span><br><span class="line">    IDBCommandFactory* dbCommandFactory;</span><br><span class="line">    IDataReaderFactory* dataReaderFactory;</span><br><span class="line">    <span class="comment">// ...构造方法省略</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;EmployeeDO&gt; <span class="title">GetEmployees</span><span class="params">()</span></span>&#123;</span><br><span class="line">        IDBConnection* connection = dbConnectionFactory-&gt;CreateDBConnection();</span><br><span class="line">        connection-&gt;ConnectionString(<span class="string">"..."</span>);</span><br><span class="line"></span><br><span class="line">        IDBCommand* command = dbCommandFactory-&gt;CreateDBCommand();</span><br><span class="line">        command-&gt;CommandText(<span class="string">"..."</span>);</span><br><span class="line">        command-&gt;SetConnection(connection); <span class="comment">//关联性</span></span><br><span class="line"></span><br><span class="line">        IDBDataReader* reader = command-&gt;ExecuteReader(); <span class="comment">//关联性</span></span><br><span class="line">        <span class="keyword">while</span> (reader-&gt;Read())&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>代码写到这里，你可能会问，这和工厂方法模式有区别吗？确实没有区别，但是这么写是有问题的，你想想看，每一种不同平台实现的连接、注入sql、执行都是不一样的，那么我们创建实例传入不同平台的连接、注入sql和执行的时候，后面肯定会报错的，因为如果传入参数不是一个平台的话，那么肯定无法执行的。</p>
-<p>仔细想想，每个平台都有具体的实现，而这些实现对象都是有<strong>相互依赖</strong>、<strong>作用</strong>的。不同平台的对象实例之间没有相通性，那么我们是否可以设计出生产单个平台所需要的实例对象呢？</p>
-<p>再次更改我们的代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IDBFactory</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 将这三个操作合并</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDBConnection* <span class="title">CreateDBConnection</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDBCommand* <span class="title">CreateDBCommand</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDataReader* <span class="title">CreateDataReader</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlDBFactory</span>:</span> <span class="keyword">public</span> IDBFactory&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDBConnection* <span class="title">CreateDBConnection</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDBCommand* <span class="title">CreateDBCommand</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDataReader* <span class="title">CreateDataReader</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleDBFactory</span>:</span> <span class="keyword">public</span> IDBFactory&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDBConnection* <span class="title">CreateDBConnection</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDBCommand* <span class="title">CreateDBCommand</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> IDataReader* <span class="title">CreateDataReader</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>当我们需要支持SQL Server时：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlConnection</span>:</span> <span class="keyword">public</span> IDBConnection&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlCommand</span>:</span> <span class="keyword">public</span> IDBCommand&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlDataReader</span>:</span> <span class="keyword">public</span> IDataReader&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>当我们需要支持Oracle时：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleConnection</span>:</span> <span class="keyword">public</span> IDBConnection&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleCommand</span>:</span> <span class="keyword">public</span> IDBCommand&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OracleDataReader</span>:</span> <span class="keyword">public</span> IDataReader&#123;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>定义实现：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EmployeeDAO</span>&#123;</span></span><br><span class="line">    IDBFactory* dbFactory;</span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;EmployeeDO&gt; <span class="title">GetEmployees</span><span class="params">()</span></span>&#123;</span><br><span class="line">        IDBConnection* connection = dbFactory-&gt;CreateDBConnection();</span><br><span class="line">        connection-&gt;ConnectionString(<span class="string">"..."</span>);</span><br><span class="line"></span><br><span class="line">        IDBCommand* command = dbFactory-&gt;CreateDBCommand();</span><br><span class="line">        command-&gt;CommandText(<span class="string">"..."</span>);</span><br><span class="line">        command-&gt;SetConnection(connection); <span class="comment">//关联性</span></span><br><span class="line"></span><br><span class="line">        IDBDataReader* reader = command-&gt;ExecuteReader(); <span class="comment">//关联性</span></span><br><span class="line">        <span class="keyword">while</span> (reader-&gt;Read())&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="要点总结"><a href="#要点总结" class="headerlink" title="要点总结"></a>要点总结</h3><ul>
-<li>如果没有应对“<strong>多系列对象构建</strong>”的需求变化，则没有必要使用 Abstract Factory模式，这时候使用简单的工厂完全可以。 </li>
-<li><strong>“系列对象”指的是在某一特定系列下的对象之间有相互依赖、 或作用的关系。</strong>不同系列的对象之间不能相互依赖。 </li>
-<li>Abstract Factory模式主要在于应对“新系列”的需求变动。其缺点在于难以应对“新对象”的需求变动。 </li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/13/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -318,13 +264,6 @@
               </span>
 
           
-            <span id="/2020/06/12/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" class="post-meta-item leancloud_visitors" data-flag-title="工厂方法模式" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
 
         </div>
       </header>
@@ -391,13 +330,6 @@
             </span>
 
           
-            <span id="/2020/06/11/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" class="post-meta-item leancloud_visitors" data-flag-title="桥接模式" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
 
         </div>
       </header>
@@ -557,100 +489,32 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src=“https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js”></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
 
 
 
-<script>
-  (function() {
-    function leancloudSelector(url) {
-      url = encodeURI(url);
-      return document.getElementById(url).querySelector('.leancloud-visitors-count');
-    }
-
-    function addCount(Counter) {
-      var visitors = document.querySelector('.leancloud_visitors');
-      var url = decodeURI(visitors.id);
-      var title = visitors.dataset.flagTitle;
-
-      
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            var counter = results[0];
-            leancloudSelector(url).innerText = counter.time + 1;
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              });
-          } else {
-              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    function showTime(Counter) {
-      var visitors = document.querySelectorAll('.leancloud_visitors');
-      var entries = [...visitors].map(element => {
-        return decodeURI(element.id);
-      });
-
-      
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          for (let url of entries) {
-            let target = results.find(item => item.url === url);
-            leancloudSelector(url).innerText = target ? target.time : 0;
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    let { app_id, app_key, server_url } = {"enable":true,"app_id":"5IRF1lSADFgeMvDm3da0QQ5p-gzGzoHsz","app_key":"8Uwe9FOtEhx9Yc2QDJOomONl","server_url":null,"security":true};
-    function fetchData(api_server) {
-      var Counter = (method, url, data) => {
-        return fetch(`${api_server}/1.1${url}`, {
-          method,
-          headers: {
-            'X-LC-Id'     : app_id,
-            'X-LC-Key'    : app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    }
-
-    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
-
-    if (api_server) {
-      fetchData(api_server);
-    } else {
-      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
-        .then(response => response.json())
-        .then(({ api_server }) => {
-          fetchData('https://' + api_server);
-        });
-    }
-  })();
-</script>
 
 
       </div>
