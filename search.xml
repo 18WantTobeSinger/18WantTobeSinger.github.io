@@ -2488,8 +2488,7 @@
   <entry>
     <title>单例模式</title>
     <url>/2020/06/17/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="" alt="chouxianggongchang"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">太过热情总是不被珍惜。</span><br><span class="line"></span><br><span class="line">                                                                        ----- 网易云热评</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">太过热情总是不被珍惜。</span><br><span class="line"></span><br><span class="line">                                                                        ----- 网易云热评</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><h3 id="“对象性能”模式"><a href="#“对象性能”模式" class="headerlink" title="“对象性能”模式"></a>“对象性能”模式</h3><ul>
