@@ -222,11 +222,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Personal introduction</title>
-    <url>/2020/04/20/Personal-introduction/</url>
-    <content><![CDATA[<h4 id="专业：软件工程"><a href="#专业：软件工程" class="headerlink" title="专业：软件工程"></a>专业：软件工程</h4><h4 id="学校：安阳师范学院"><a href="#学校：安阳师范学院" class="headerlink" title="学校：安阳师范学院"></a>学校：安阳师范学院</h4><h4 id="专业方向：Java"><a href="#专业方向：Java" class="headerlink" title="专业方向：Java"></a>专业方向：Java</h4><h4 id="技能：JavaWeb、SSM、SpringBoot、Html、css"><a href="#技能：JavaWeb、SSM、SpringBoot、Html、css" class="headerlink" title="技能：JavaWeb、SSM、SpringBoot、Html、css"></a>技能：JavaWeb、SSM、SpringBoot、Html、css</h4><h4 id="年龄：21"><a href="#年龄：21" class="headerlink" title="年龄：21"></a>年龄：21</h4><h4 id="姓名：姬鹏辉"><a href="#姓名：姬鹏辉" class="headerlink" title="姓名：姬鹏辉"></a>姓名：姬鹏辉</h4><h4 id="邮箱：2783266620-qq-com"><a href="#邮箱：2783266620-qq-com" class="headerlink" title="邮箱：2783266620@qq.com"></a>邮箱：<a href="mailto:2783266620@qq.com">2783266620@qq.com</a></h4>]]></content>
-  </entry>
-  <entry>
     <title>Thymeleaf的标准表达式</title>
     <url>/2020/05/07/Thymeleaf%E7%9A%84%E6%A0%87%E5%87%86%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[<p><strong>th:text/th:utext</strong></p>
@@ -1543,7 +1538,7 @@
 <ul>
 <li><p>可以查看selectImports()方法的内容；</p>
 </li>
-<li><p>List<String> configurations = getCandidateConfigurations(annotationMetadata,      attributes);获取候选的配置</String></p>
+<li><p>List<String> configurations = getCandidateConfigurations(annotationMetadata,      attributes);获取候选的配置</p>
 <ul>
 <li><pre class=" language-java"><code class="language-java">SpringFactoriesLoader<span class="token punctuation">.</span><span class="token function">loadFactoryNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 扫描所有jar包类路径下  META<span class="token operator">-</span>INF<span class="token operator">/</span>spring<span class="token punctuation">.</span>factories
@@ -1699,7 +1694,7 @@
 <p>​    3）、中间替换包？</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SuppressWarnings</span>(<span class="string">"rawtypes"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">LogFactory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> String UNSUPPORTED_OPERATION_IN_JCL_OVER_SLF4J = <span class="string">"http://www.slf4j.org/codes.html#unsupported_operation_in_jcl_over_slf4j"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> LogFactory logFactory = <span class="keyword">new</span> SLF4JLogFactory();</span><br></pre></td></tr></table></figure>
 
-<p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/06/01/ZrXGaYj9hnTzPME.png" alt></p>
+<p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/06/01/ZrXGaYj9hnTzPME.png" alt=""></p>
 <p>​    4）、如果我们要引入其他框架？一定要把这个框架的默认日志依赖移除掉？</p>
 <p>​            Spring框架用的是commons-logging；</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1814,7 +1809,7 @@
 <p>==1）、所有 /webjars/** ，都去 classpath:/META-INF/resources/webjars/ 找资源；==</p>
 <p>​    webjars：以jar包的方式引入静态资源；</p>
 <p><a href="http://www.webjars.org/" target="_blank" rel="noopener">http://www.webjars.org/</a></p>
-<p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/06/01/1XxoKyFz6p4m8cV.png" alt></p>
+<p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/06/01/1XxoKyFz6p4m8cV.png" alt=""></p>
 <p>localhost:8080/webjars/jquery/3.3.1/jquery.js</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--引入jquery-webjar--&gt;</span>在访问的时候只需要写webjars下面资源的名称即可</span><br><span class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.webjars<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jquery<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -1828,7 +1823,7 @@
 <p>​    localhost:8080/   找index页面</p>
 <p>==4）、所有的 **/favicon.ico  都是在静态资源文件下找；==</p>
 <h2 id="3、模板引擎"><a href="#3、模板引擎" class="headerlink" title="3、模板引擎"></a>3、模板引擎</h2><p>JSP、Velocity、Freemarker、Thymeleaf</p>
-<p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/06/01/iEW63kwtnO9ZYgM.png" alt></p>
+<p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/06/01/iEW63kwtnO9ZYgM.png" alt=""></p>
 <p>SpringBoot推荐的Thymeleaf；</p>
 <p>语法更简单，功能更强大；</p>
 <h3 id="1、引入thymeleaf；"><a href="#1、引入thymeleaf；" class="headerlink" title="1、引入thymeleaf；"></a>1、引入thymeleaf；</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-thymeleaf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">          	2.1.6</span><br><span class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">切换thymeleaf版本</span><br><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">thymeleaf.version</span>&gt;</span>3.0.9.RELEASE<span class="tag">&lt;/<span class="name">thymeleaf.version</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- 布局功能的支持程序  thymeleaf3主程序  layout2以上版本 --&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- thymeleaf2   layout1--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">thymeleaf-layout-dialect.version</span>&gt;</span>2.2.2<span class="tag">&lt;/<span class="name">thymeleaf-layout-dialect.version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure>
