@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-17T15:08:49.109Z</updated>
+  <updated>2020-06-18T02:40:51.128Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WelCome To My Blog</title>
+    <link href="http://yoursite.com/2020/06/18/hello-world/"/>
+    <id>http://yoursite.com/2020/06/18/hello-world/</id>
+    <published>2020-06-18T02:16:56.566Z</published>
+    <updated>2020-06-18T02:40:51.128Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎光临，本寒舍蓬荜生辉！</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;欢迎光临，本寒舍蓬荜生辉！&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>单例模式</title>
@@ -441,29 +464,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>摩尔投票法</title>
-    <link href="http://yoursite.com/2020/05/18/%E6%91%A9%E5%B0%94%E6%8A%95%E7%A5%A8%E6%B3%95/"/>
-    <id>http://yoursite.com/2020/05/18/%E6%91%A9%E5%B0%94%E6%8A%95%E7%A5%A8%E6%B3%95/</id>
-    <published>2020-05-18T10:04:30.000Z</published>
-    <updated>2020-05-18T11:10:04.756Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>摩尔投票法</strong>： 该算法用于1/2情况，它说：“在任何数组中，出现次数大于该数组长度一半的值只能有一个。” </p><a id="more"></a><p>那么改进一下用于<code>1/3</code>，可以这么说： “在任何数组中，出现次数大于该数组长度1/3的值最多只有两个。” </p><p>LeetCode题目：</p><ul><li><p><a href="https://leetcode-cn.com/problems/majority-element/" target="_blank" rel="noopener">169. 多数元素</a></p></li><li><h6 id="229-求众数-II"><a href="#229-求众数-II" class="headerlink" title="229. 求众数 II"></a><a href="https://leetcode-cn.com/problems/majority-element-ii/" target="_blank" rel="noopener">229. 求众数 II</a></h6></li></ul><p>摩尔投票法思路很简单（<strong>1/2情况</strong>），由于结果只能有一个，那么我们可以遍历整个数组，随便挑两个不一样的数字，删除这两个数字，那么知道找不出两个不同的数字，剩下的数字就是结果。</p><p>该算法整体思路如下：</p><p>我们设结果为<code>res</code>，用<code>cnt</code>表示数字出现的次数。cnt初值为0，如果cnt为0， 也就是说之前的遍历过程中并没有找到超过半数的元素。 如果res存在，那么res在之后的数组中，出现的次数也一定超过半数。</p><p>如果res还没有赋值，那么cnt一定为0。我们可以判断如果cnt为0的时候，更新res和cnt。继续下一次遍历，如果遇到的数字与res相同，就在cnt的基础上+1，否则-1；如果当前res不是我们要求的数字结果，那么总有一次遍历cnt会减为0，继续遍历会更新res。</p><p>代码实现：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = -<span class="number">1</span>, cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> num: nums) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">0</span>) &#123;</span><br><span class="line">            cnt ++;</span><br><span class="line">            res = num;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cnt = num == res ? ++cnt: --cnt;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>那么在<code>1/3情况</code>呢？，我们很容易知道，在一个长度为n的数组中，出现次数大于n/3的元素，最多只能有两个。那么我们就设两个res和cnt，遍历思路和上面的代码相同。但是遍历之后要统计这两个元素出现的个数是否大于n/3.</p><p>代码实现：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">majorityElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line">    <span class="keyword">int</span> n1 = <span class="number">0</span>, n2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> cnt1 = <span class="number">0</span>, cnt2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">        <span class="keyword">if</span> ((cnt1 == <span class="number">0</span> || n1 == num) &amp;&amp; num != n2) &#123;</span><br><span class="line">            ++ cnt1;</span><br><span class="line">            n1 = num;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (cnt2 == <span class="number">0</span> || n2 == num) &#123;</span><br><span class="line">            ++ cnt2;</span><br><span class="line">            n2 = num;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            -- cnt1;</span><br><span class="line">            -- cnt2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> c1 = <span class="number">0</span>, c2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> num: nums) &#123;</span><br><span class="line">        <span class="keyword">if</span> (num == n1) c1 ++;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (num == n2) c2 ++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (c1 &gt; nums.<span class="built_in">size</span>() / <span class="number">3</span>) res.push_back(n1);</span><br><span class="line">    <span class="keyword">if</span> (c2 &gt; nums.<span class="built_in">size</span>() / <span class="number">3</span>) res.push_back(n2);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;摩尔投票法&lt;/strong&gt;： 该算法用于1/2情况，它说：“在任何数组中，出现次数大于该数组长度一半的值只能有一个。” &lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
