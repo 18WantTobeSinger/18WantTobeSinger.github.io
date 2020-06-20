@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-18T02:40:51.128Z</updated>
+  <updated>2020-06-20T05:22:50.608Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>整除光棍</title>
+    <link href="http://yoursite.com/2020/06/20/%E6%95%B4%E9%99%A4%E5%85%89%E6%A3%8D/"/>
+    <id>http://yoursite.com/2020/06/20/%E6%95%B4%E9%99%A4%E5%85%89%E6%A3%8D/</id>
+    <published>2020-06-20T05:16:57.000Z</published>
+    <updated>2020-06-20T05:22:50.608Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>这里所谓的“光棍”，并不是指单身汪啦~ 说的是全部由1组成的数字，比如1、11、111、1111等。传说任何一个光棍都能被一个不以5结尾的奇数整除。比如，111111就可以被13整除。 现在，你的程序要读入一个整数<code>x</code>，这个整数一定是奇数并且不以5结尾。然后，经过计算，输出两个数字：第一个数字<code>s</code>，表示<code>x</code>乘以<code>s</code>是一个光棍，第二个数字<code>n</code>是这个光棍的位数。这样的解当然不是唯一的,题目要求你输出最小的解。</p><p>提示：一个显然的办法是逐渐增加光棍的位数，直到可以整除<code>x</code>为止。但难点在于，<code>s</code>可能是个非常大的数 —— 比如，程序输入31，那么就输出3584229390681和15，因为31乘以3584229390681的结果是111111111111111，一共15个1。</p><h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p> 输入在一行中给出一个不以5结尾的正奇数<code>x</code>（&lt;1000）。 </p><h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p> 在一行中输出相应的最小的<code>s</code>和<code>n</code>，其间以1个空格分隔。 </p><h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">31</span></span><br></pre></td></tr></table></figure><h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3584229390681</span> <span class="number">15</span></span><br></pre></td></tr></table></figure><h3 id="程序代码："><a href="#程序代码：" class="headerlink" title="程序代码："></a>程序代码：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> x, s = <span class="number">0</span>, n = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (x % <span class="number">5</span> == <span class="number">0</span> || x % <span class="number">2</span> == <span class="number">0</span> || x &gt;= <span class="number">1000</span>) </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (x &gt; s) &#123;</span><br><span class="line">s = s * <span class="number">10</span> + <span class="number">1</span>;</span><br><span class="line">n ++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, s / x);</span><br><span class="line">s %= x;</span><br><span class="line"><span class="keyword">if</span> (s == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">s = s * <span class="number">10</span> + <span class="number">1</span>;</span><br><span class="line">n ++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">" %d"</span>, n);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>WelCome To My Blog</title>
@@ -435,25 +456,6 @@
       <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
     
       <category term="二分 - 动态规划" scheme="http://yoursite.com/tags/%E4%BA%8C%E5%88%86-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM之Java内存区域</title>
-    <link href="http://yoursite.com/2020/05/22/JVM%E4%B9%8BJava%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/"/>
-    <id>http://yoursite.com/2020/05/22/JVM%E4%B9%8BJava%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/</id>
-    <published>2020-05-22T09:19:08.060Z</published>
-    <updated>2020-05-29T09:06:34.087Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近学习了关于JVM的一些底层知识，夏天太热了，学不进去，然后想利用这些无聊的时间整理一些之前学过的一些JVM的知识。如果哪里有错误，欢迎来指出（QQ：2136384653）：</p><a id="more"></a><h2 id="首先我们来介绍一下运行时数据区"><a href="#首先我们来介绍一下运行时数据区" class="headerlink" title="首先我们来介绍一下运行时数据区"></a>首先我们来介绍一下运行时数据区</h2><p>话不多说，先以图的方式看一下Java虚拟机运行时数据区域：</p><p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/05/22/ubrsWT8BqdKxgh9.png" alt="JVM.png"></p><p>其中<strong>$\color{green}{绿色}$</strong>的部分表示由所有线程共享的数据区，而$\color{orange}{橙色}$的部分表示线程私有的，即每个线程都有$\color{orange}{橙色}$部分的东东。</p><p>接下来我们把这五个分布分别代表着什么介绍一边。先来一张大致的图：</p><p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/05/29/L3kgF4qCAuvmDwi.png" alt="image.png"></p><h3 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h3><p>它是一块较小的内存区域，可以将它看作是当前线程所执行的字节码的行号指示器。字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都要依赖这个计数器完成。</p><p>由于它是<strong>线程私有</strong>的，所以每个线程都有一个独立的程序计数器，各条线程的计数器互不影响。</p><p><em>他是唯一一个在 <code>JVM</code> 规范中没有规定任何<strong>OutOfMemoryError</strong>情况的区域.</em></p><h3 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a>Java虚拟机栈</h3><p>和程序计数器一样，它也是<strong>线程私有</strong>的，生命周期和线程相同。</p><p>虚拟机栈描述的是Java方法执行的内存模型：每个方法在执行的同时都会创建一个栈帧（Stack Frame）用于存储<strong>局部变量表</strong>、<strong>操作数栈</strong>、动态链接、方法出口等信息。每个方法从调用直至执行完成的过程，就对应着一个栈帧在虚拟机栈中入栈和出栈的过程。如图所示：</p><p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/05/24/WQenTvlVrx6fcSB.png" alt="image.png"></p><h4 id="1、局部变量表："><a href="#1、局部变量表：" class="headerlink" title="1、局部变量表："></a><strong>1、局部变量表</strong>：</h4><p>​    （本地变量表）中存放了<strong>编译期</strong>可知的各种<a href="https://18wanttobesinger.github.io/2020/04/21/LeetCode%E5%88%B7%E9%A2%98%E7%BB%8F%E5%8E%86/#more" target="_blank" rel="noopener">基本数据类型</a>、对象引用（reference类型，指向对象起始地址的引用指针）以及returnAddress类型，所以它的容量大小在编译期就已经确定下来了，运行期间不会更改它的大小。由于局部变量表是建立在线程得栈上，是线程私有的数据，所以不存在安全性问题。</p><p>​    局部变量表的基本单位是slot（变量槽），只有double和lang类型的变量占据两个sot。</p><h4 id="2、操作数栈："><a href="#2、操作数栈：" class="headerlink" title="2、操作数栈："></a><strong>2、操作数栈</strong>：</h4><p>​        使用数组来实现，它是有长度的，在编译的时候就已经确定了栈的深度（不可以用索引来访问栈中的数据）。在方法执行过程中，根据字节码指令，向栈中写入数据或提取数据。栈中的数据类型必须和字节码指令的序列严格匹配。</p><h4 id="3、动态链接（指向运行时常量池的方法引用）："><a href="#3、动态链接（指向运行时常量池的方法引用）：" class="headerlink" title="3、动态链接（指向运行时常量池的方法引用）："></a><strong>3、动态链接</strong>（指向运行时常量池的方法引用）：</h4><p>​        每一个栈帧内部都包含一个指向<strong>运行时常量池</strong>中<strong>该栈帧所属的方法引用</strong>。包含这个引用的目的是为了支持当前方法的代码能够实现<strong>动态链接</strong>。比如：invokedynamic指令。</p><p>在Java源文件被编译到字节码文件中时，所有的变量和方法引用都作为符号引用（Symbolic Reference）保存在class文件得常量池里，比如：描述一个方法调用了另外的其他方法时，就是通过常量池中指向方法的符号引用来表示的，那么<strong>动态链接的作用就是为了将这些符号引用转换为调用方法的直接引用。</strong></p><p><em>这里补一下：运行时常量池位置在方法区中，是线程共享的，和Class文件常量池不一样。</em></p><h4 id="4、方法出口（方法返回地址）："><a href="#4、方法出口（方法返回地址）：" class="headerlink" title="4、方法出口（方法返回地址）："></a><strong>4、方法出口（方法返回地址）</strong>：</h4><p>​        如果线程请求的栈深度大于虚拟机栈所允许的深度，将会抛出<strong>StackOverflowError</strong>异常，如果虚拟机栈可以动态扩展，那么扩展时无法申请到足够的内存，就会抛出<strong>OutOfMemoryError</strong>异常。</p><h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><p>​        本地方法栈和虚拟机栈所发挥的作用很相似，它们的区别只不过是虚拟机栈为虚拟机执行Java方法服务，而本地方法栈则为虚拟机使用到的Native方法服务。它也会抛出<strong>StackOverflowError</strong>异常和<strong>OutOfMemoryError</strong>异常。</p><h3 id="Java堆"><a href="#Java堆" class="headerlink" title="Java堆"></a>Java堆</h3><p>​        Java堆（Heap）是Java虚拟机所管理的内存中最大的一块。在虚拟机启动时创建。此内存区唯一目的就是存放对象实例，几乎所有的对象实例都在这里分配。（随着JIT编译器的发展与逃逸分析技术逐渐成熟，所有对象都在堆上也渐渐变得不是那么”绝对“了）。</p><p>Java堆是垃圾收集器管理的主要区域，也被称为 ”GC堆“。Java堆还可以细分，如图所示：</p><p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/05/22/tFHSObfoR7z5yZP.png" alt="Heap.png"></p><p>可以通过设置参数（<strong>-Xmx</strong>和<strong>-Xms</strong>调制大小）</p><h3 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h3><p>​        方法区（Method Area）与Java堆一样，是各个线程共享的内存区域，主要用来存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。当方法去无法满足内存分配需求时，将抛出<strong>OutOfMemoryError</strong>异常。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近学习了关于JVM的一些底层知识，夏天太热了，学不进去，然后想利用这些无聊的时间整理一些之前学过的一些JVM的知识。如果哪里有错误，欢迎来指出（QQ：2136384653）：&lt;/p&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   
