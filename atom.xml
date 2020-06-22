@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://18wanttobesinger.github.io/"/>
   <updated>2020-06-22T00:00:20.181Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://18wanttobesinger.github.io/</id>
   
   <author>
     <name>我好中意你啊</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>基本计算器</title>
-    <link href="http://yoursite.com/2020/06/21/%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97%E5%99%A8/"/>
-    <id>http://yoursite.com/2020/06/21/%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97%E5%99%A8/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/21/%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97%E5%99%A8/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/21/%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97%E5%99%A8/</id>
     <published>2020-06-21T12:34:22.000Z</published>
     <updated>2020-06-22T00:00:20.181Z</updated>
     
@@ -33,37 +33,16 @@
     
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://18wanttobesinger.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="栈" scheme="http://yoursite.com/tags/%E6%A0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>倒数第N个字符串</title>
-    <link href="http://yoursite.com/2020/06/21/%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>http://yoursite.com/2020/06/21/%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
-    <published>2020-06-21T03:34:10.000Z</published>
-    <updated>2020-06-22T00:02:19.846Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">"姑娘有心事？"书生抿嘴品茶问到。 </span><br><span class="line">少女："公子与王公子可是熟识？" </span><br><span class="line">书生："世交。" </span><br><span class="line">少女："那下次你与他一起来吧。" </span><br><span class="line">书生："他不喜品茶。" </span><br><span class="line">少女："没关系，那他喜欢什么，我可以慢慢学。" </span><br><span class="line">书生："他喜欢我。"</span><br><span class="line"></span><br><span class="line">                                                                    ----- 网易云热评</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="倒数第N个字符串"><a href="#倒数第N个字符串" class="headerlink" title="倒数第N个字符串"></a>倒数第N个字符串</h2><h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><p>给定一个完全由小写英文字母组成的字符串等差递增序列，该序列中的每个字符串的长度固定为 L，从 L 个 a 开始，以 1 为步长递增。例如当 L 为 3 时，序列为 { aaa, aab, aac, …, aaz, aba, abb, …, abz, …, zzz }。这个序列的倒数第27个字符串就是 zyz。对于任意给定的 L，本题要求你给出对应序列倒数第 N 个字符串。</p><h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出两个正整数 L（2 ≤ L ≤ 6）和 N（≤105）。</p><h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出对应序列倒数第 N 个字符串。题目保证这个字符串是存在的。</p><h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 7417</span><br></pre></td></tr></table></figure><h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pat</span><br></pre></td></tr></table></figure><h3 id="示例代码："><a href="#示例代码：" class="headerlink" title="示例代码："></a>示例代码：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> L, N;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;L, &amp;N);</span><br><span class="line">    <span class="keyword">int</span> n = <span class="built_in">pow</span>(<span class="number">26</span>, L) - N;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> num[L];</span><br><span class="line">    <span class="keyword">int</span> ind = L;</span><br><span class="line">    <span class="keyword">while</span> (L -- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        num[L] = n % <span class="number">26</span>;</span><br><span class="line">        n = n / <span class="number">26</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ind; i ++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c"</span>, num[i] + <span class="string">'a'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="继续加油吧🤪"><a href="#继续加油吧🤪" class="headerlink" title="继续加油吧🤪"></a>继续加油吧🤪</h3>]]></content>
-    
-    <summary type="html">
-    
-      倒数第N个字符串
-    
-    </summary>
-    
-    
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="栈" scheme="https://18wanttobesinger.github.io/tags/%E6%A0%88/"/>
     
   </entry>
   
   <entry>
     <title>倒数第N个字符串</title>
-    <link href="http://yoursite.com/2020/06/21/hello-world/"/>
-    <id>http://yoursite.com/2020/06/21/hello-world/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/21/hello-world/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/21/hello-world/</id>
     <published>2020-06-21T03:34:10.000Z</published>
     <updated>2020-06-21T04:32:48.364Z</updated>
     
@@ -77,14 +56,35 @@
     
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://18wanttobesinger.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>倒数第N个字符串</title>
+    <link href="https://18wanttobesinger.github.io/2020/06/21/%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/21/%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2020-06-21T03:34:10.000Z</published>
+    <updated>2020-06-22T00:02:19.846Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">"姑娘有心事？"书生抿嘴品茶问到。 </span><br><span class="line">少女："公子与王公子可是熟识？" </span><br><span class="line">书生："世交。" </span><br><span class="line">少女："那下次你与他一起来吧。" </span><br><span class="line">书生："他不喜品茶。" </span><br><span class="line">少女："没关系，那他喜欢什么，我可以慢慢学。" </span><br><span class="line">书生："他喜欢我。"</span><br><span class="line"></span><br><span class="line">                                                                    ----- 网易云热评</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="倒数第N个字符串"><a href="#倒数第N个字符串" class="headerlink" title="倒数第N个字符串"></a>倒数第N个字符串</h2><h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><p>给定一个完全由小写英文字母组成的字符串等差递增序列，该序列中的每个字符串的长度固定为 L，从 L 个 a 开始，以 1 为步长递增。例如当 L 为 3 时，序列为 { aaa, aab, aac, …, aaz, aba, abb, …, abz, …, zzz }。这个序列的倒数第27个字符串就是 zyz。对于任意给定的 L，本题要求你给出对应序列倒数第 N 个字符串。</p><h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出两个正整数 L（2 ≤ L ≤ 6）和 N（≤105）。</p><h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出对应序列倒数第 N 个字符串。题目保证这个字符串是存在的。</p><h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 7417</span><br></pre></td></tr></table></figure><h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pat</span><br></pre></td></tr></table></figure><h3 id="示例代码："><a href="#示例代码：" class="headerlink" title="示例代码："></a>示例代码：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> L, N;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;L, &amp;N);</span><br><span class="line">    <span class="keyword">int</span> n = <span class="built_in">pow</span>(<span class="number">26</span>, L) - N;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> num[L];</span><br><span class="line">    <span class="keyword">int</span> ind = L;</span><br><span class="line">    <span class="keyword">while</span> (L -- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        num[L] = n % <span class="number">26</span>;</span><br><span class="line">        n = n / <span class="number">26</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ind; i ++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c"</span>, num[i] + <span class="string">'a'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="继续加油吧🤪"><a href="#继续加油吧🤪" class="headerlink" title="继续加油吧🤪"></a>继续加油吧🤪</h3>]]></content>
+    
+    <summary type="html">
+    
+      倒数第N个字符串
+    
+    </summary>
+    
+    
+    
+      <category term="算法" scheme="https://18wanttobesinger.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>天梯赛座位分配</title>
-    <link href="http://yoursite.com/2020/06/20/%E5%A4%A9%E6%A2%AF%E8%B5%9B%E5%BA%A7%E4%BD%8D%E5%88%86%E9%85%8D/"/>
-    <id>http://yoursite.com/2020/06/20/%E5%A4%A9%E6%A2%AF%E8%B5%9B%E5%BA%A7%E4%BD%8D%E5%88%86%E9%85%8D/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/20/%E5%A4%A9%E6%A2%AF%E8%B5%9B%E5%BA%A7%E4%BD%8D%E5%88%86%E9%85%8D/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/20/%E5%A4%A9%E6%A2%AF%E8%B5%9B%E5%BA%A7%E4%BD%8D%E5%88%86%E9%85%8D/</id>
     <published>2020-06-20T09:22:38.000Z</published>
     <updated>2020-06-22T00:02:49.273Z</updated>
     
@@ -98,14 +98,14 @@
     
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://18wanttobesinger.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>整除光棍</title>
-    <link href="http://yoursite.com/2020/06/20/%E6%95%B4%E9%99%A4%E5%85%89%E6%A3%8D/"/>
-    <id>http://yoursite.com/2020/06/20/%E6%95%B4%E9%99%A4%E5%85%89%E6%A3%8D/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/20/%E6%95%B4%E9%99%A4%E5%85%89%E6%A3%8D/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/20/%E6%95%B4%E9%99%A4%E5%85%89%E6%A3%8D/</id>
     <published>2020-06-20T05:16:57.000Z</published>
     <updated>2020-06-22T00:03:10.690Z</updated>
     
@@ -119,14 +119,14 @@
     
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://18wanttobesinger.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>单例模式</title>
-    <link href="http://yoursite.com/2020/06/17/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/06/17/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/17/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/17/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-06-17T14:04:16.000Z</published>
     <updated>2020-06-17T15:08:49.109Z</updated>
     
@@ -143,14 +143,14 @@
     
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://18wanttobesinger.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>建造者模式</title>
-    <link href="http://yoursite.com/2020/06/16/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/06/16/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/16/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/16/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-06-16T08:49:23.000Z</published>
     <updated>2020-06-17T22:31:58.169Z</updated>
     
@@ -164,14 +164,14 @@
     
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://18wanttobesinger.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>重新排列数组</title>
-    <link href="http://yoursite.com/2020/06/16/%E9%87%8D%E6%96%B0%E6%8E%92%E5%88%97%E6%95%B0%E7%BB%84/"/>
-    <id>http://yoursite.com/2020/06/16/%E9%87%8D%E6%96%B0%E6%8E%92%E5%88%97%E6%95%B0%E7%BB%84/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/16/%E9%87%8D%E6%96%B0%E6%8E%92%E5%88%97%E6%95%B0%E7%BB%84/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/16/%E9%87%8D%E6%96%B0%E6%8E%92%E5%88%97%E6%95%B0%E7%BB%84/</id>
     <published>2020-06-16T08:25:48.000Z</published>
     <updated>2020-06-22T00:08:31.505Z</updated>
     
@@ -185,16 +185,16 @@
     
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://18wanttobesinger.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="位运算" scheme="http://yoursite.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+      <category term="位运算" scheme="https://18wanttobesinger.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title>原型模式</title>
-    <link href="http://yoursite.com/2020/06/15/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/06/15/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/15/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/15/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-06-15T08:03:57.000Z</published>
     <updated>2020-06-17T15:07:06.291Z</updated>
     
@@ -208,14 +208,14 @@
     
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://18wanttobesinger.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>抽象工厂模式</title>
-    <link href="http://yoursite.com/2020/06/13/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/06/13/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/13/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/13/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-06-13T09:19:33.000Z</published>
     <updated>2020-06-17T15:00:12.143Z</updated>
     
@@ -229,18 +229,18 @@
     
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://18wanttobesinger.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>工厂方法模式</title>
-    <link href="http://yoursite.com/2020/06/12/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/06/12/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/12/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/12/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-06-12T13:24:20.000Z</published>
     <updated>2020-06-17T14:58:44.976Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">愿世间的美好，与你环环相扣。</span><br><span class="line"></span><br><span class="line">                                                                        ----- 网易云热评</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><h3 id="”对象创建“-模式"><a href="#”对象创建“-模式" class="headerlink" title="”对象创建“ 模式"></a>”对象创建“ 模式</h3><ul><li>通过“对象创建” 模式绕开new，来避免对象创建（new）过程 中所导致的紧耦合（依赖具体类），从而支持对象创建的稳定。它 是接口抽象之后的第一步工作。</li><li>典型模式<ul><li>Factory Method</li><li>Abstract Factory</li><li>Prototype</li><li>Builder  </li></ul></li></ul><h3 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h3><ul><li>在软件系统中，经常面临着创建对象的工作；由于需求的变化，需要创建的对象的具体类型经常变化。</li><li>如何应对这种变化？如何绕过常规的对象创建方法(new)，提供一种“封装机制”来避免客户程序和这种“具体对象创建工作”的紧耦合？</li></ul><h3 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h3><p>定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method使得一个类的实例化延迟（目的：解耦，手段：虚函数）到子类。</p><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><p>还记得在讲<a href="https://18wanttobesinger.github.io/2020/06/08/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/#more" target="_blank" rel="noopener">观察者模式</a>的时候，我们的需求是实现将大文件分割成若干的小文件。我们先看一下实现代码：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainForm</span> :</span> <span class="keyword">public</span> Form, <span class="keyword">public</span> IProgress</span><br><span class="line">&#123;</span><br><span class="line">    TextBox* txtFilePath;</span><br><span class="line">    TextBox* txtFileNumber;</span><br><span class="line"></span><br><span class="line">    ProgressBar* progressBar;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Button1_Click</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">string</span> filePath = txtFilePath-&gt;getText();</span><br><span class="line">        <span class="keyword">int</span> number = atoi(txtFileNumber-&gt;getText().c_str());</span><br><span class="line"></span><br><span class="line">        FileSplitter* splitter = <span class="keyword">new</span> FileSplitter(filePath, number);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>我们可以观察到，我们创建对象的方式是直接new的这个对象。那么我们知道根据面向接口编程原则，当我们需要对一个类进行分类扩展时，对象的类型，我们应该将其声明为<strong>抽象类</strong>或者<strong>接口</strong>。接下来我们就这么做：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ISplitter</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">split</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">virtual</span> ~ISplitter()&#123; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BinarySplitter</span>:</span> <span class="keyword">public</span> ISplitter&#123;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TxtSplitter</span>:</span> <span class="keyword">public</span> ISplitter&#123;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PictureSplitter</span>:</span> <span class="keyword">public</span> ISplitter&#123;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VideoSplitter</span>:</span> <span class="keyword">public</span> ISplitter&#123;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>每个ISplitter的子类都有其具体的实现。那么我们应该这么创建对象：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ISplitter* splitter1 = <span class="keyword">new</span> BinarySplitter(filePath, number);</span><br><span class="line">ISplitter* splitter2 = <span class="keyword">new</span> TxtSplitter(filePath, number);</span><br><span class="line">ISplitter* splitter3 = <span class="keyword">new</span> PictureSplitter(filePath, number);</span><br><span class="line">ISplitter* splitter4 = <span class="keyword">new</span> VideoSplitter(filePath, number);</span><br></pre></td></tr></table></figure><p>那么根据<strong>依赖倒置原则</strong>：<strong>我们应该依赖抽象，不该依赖实现细节</strong>。可以看到上面的创建实例代码，左边我们定义的是抽象类型，但是右边我们还是要依赖实现细节。我们知道上面代码创建对象我们都使用的<code>new</code>关键字，那么我么如何绕开<code>new</code>，来避免对象创建（new）过程中所导致的紧耦合（依赖具体类），从而支持对象创建的稳定呢？</p><p>我们来定义一个工厂：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SplitterFactory</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ISplitter <span class="title">createSplitter</span><span class="params">(...)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BinarySplitter(...);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建对象</span></span><br><span class="line">... </span><br><span class="line">SplitterFactory factory;</span><br><span class="line">SpliterFactory* sp = factory.createSplitter(...);</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>我们试图以方法的形式创建对象，但是可以发现，还是无法脱离<code>new</code>的 “魔爪” 。我们还是依赖着具体实现… 那怎么办呢？仔细想想，我们上面直接创建对象都是编译时依赖，能不能将它转换成运行时依赖呢？</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ISplitter</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">split</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">virtual</span> ~ISplitter()&#123; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SplitterFactory</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> ISplitter <span class="title">createSplitter</span><span class="params">(...)</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">virtual</span> ~SplitterFactory()&#123; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建对象</span></span><br><span class="line">...</span><br><span class="line"><span class="comment">// 我们创建指针</span></span><br><span class="line">SplitterFactory* factory;</span><br><span class="line"><span class="comment">// 真正创建对象时交给未来 (factory)</span></span><br><span class="line">ISplitter* splitter = factory-&gt;createSplitter();</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>针对要创建的具体对象，我们分别定义其生产该类型对象的工厂：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BinarySplitterFactory</span>:</span> <span class="keyword">public</span> SplitterFactory&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> ISplitter <span class="title">createSplitter</span><span class="params">(...)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BinarySplitter();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 其他类和上述相似</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>我们可以看到，每一个具体的类，都有其对应的工厂。那么你看到这里也许很懵，这样解决了我们原先遇到的问题了吗？请继续看下面的代码改进：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainForm</span> :</span> <span class="keyword">public</span> Form &#123;</span><br><span class="line">    SplitterFactory* factory;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 具体要创建对象的工厂是需要传入的，那么我们要什么对象就传该对象的工厂即可</span></span><br><span class="line">    MainForm(SplitterFactory* factory) &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;factory = factory;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Button_Click</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ISplitter* sp = factory-&gt;createSplitter(); <span class="comment">// 多态</span></span><br><span class="line">        sp-&gt;split();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>至此，我们可以看到MainForm中已经极大程度的降低了依赖，我们可以观察里面的所有对象都是抽象的。依赖是不是已经降低了呢？</p><h3 id="要点总结"><a href="#要点总结" class="headerlink" title="要点总结"></a>要点总结</h3><ul><li>Factory Method模式用于隔离类对象的使用者和具体类型之间的 耦合关系。面对一个经常变化的具体类型，紧耦合关系(new)会导 致软件的脆弱。</li><li>Factory Method模式通过面向对象的手法，将所要<strong>创建的具体对 象工作延迟到子类</strong>，从而实现一种扩展（而非更改）的策略，较好地解决了这种紧耦合关系。</li><li>Factory Method模式解决“单个对象”的需求变化。缺点在于要 求创建方法/参数相同。</li></ul>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">愿世间的美好，与你环环相扣。</span><br><span class="line"></span><br><span class="line">                                                                        ----- 网易云热评</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><h3 id="”对象创建“-模式"><a href="#”对象创建“-模式" class="headerlink" title="”对象创建“ 模式"></a>”对象创建“ 模式</h3><ul><li>通过“对象创建” 模式绕开new，来避免对象创建（new）过程 中所导致的紧耦合（依赖具体类），从而支持对象创建的稳定。它 是接口抽象之后的第一步工作。</li><li>典型模式<ul><li>Factory Method</li><li>Abstract Factory</li><li>Prototype</li><li>Builder  </li></ul></li></ul><h3 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h3><ul><li>在软件系统中，经常面临着创建对象的工作；由于需求的变化，需要创建的对象的具体类型经常变化。</li><li>如何应对这种变化？如何绕过常规的对象创建方法(new)，提供一种“封装机制”来避免客户程序和这种“具体对象创建工作”的紧耦合？</li></ul><h3 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h3><p>定义一个用于创建对象的接口，让子类决定实例化哪一个类。Factory Method使得一个类的实例化延迟（目的：解耦，手段：虚函数）到子类。</p><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><p>还记得在讲<a href="https://18wanttobesinger.github.io/2020/06/08/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/#more">观察者模式</a>的时候，我们的需求是实现将大文件分割成若干的小文件。我们先看一下实现代码：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainForm</span> :</span> <span class="keyword">public</span> Form, <span class="keyword">public</span> IProgress</span><br><span class="line">&#123;</span><br><span class="line">    TextBox* txtFilePath;</span><br><span class="line">    TextBox* txtFileNumber;</span><br><span class="line"></span><br><span class="line">    ProgressBar* progressBar;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Button1_Click</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">string</span> filePath = txtFilePath-&gt;getText();</span><br><span class="line">        <span class="keyword">int</span> number = atoi(txtFileNumber-&gt;getText().c_str());</span><br><span class="line"></span><br><span class="line">        FileSplitter* splitter = <span class="keyword">new</span> FileSplitter(filePath, number);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>我们可以观察到，我们创建对象的方式是直接new的这个对象。那么我们知道根据面向接口编程原则，当我们需要对一个类进行分类扩展时，对象的类型，我们应该将其声明为<strong>抽象类</strong>或者<strong>接口</strong>。接下来我们就这么做：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ISplitter</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">split</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">virtual</span> ~ISplitter()&#123; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BinarySplitter</span>:</span> <span class="keyword">public</span> ISplitter&#123;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TxtSplitter</span>:</span> <span class="keyword">public</span> ISplitter&#123;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PictureSplitter</span>:</span> <span class="keyword">public</span> ISplitter&#123;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VideoSplitter</span>:</span> <span class="keyword">public</span> ISplitter&#123;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>每个ISplitter的子类都有其具体的实现。那么我们应该这么创建对象：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ISplitter* splitter1 = <span class="keyword">new</span> BinarySplitter(filePath, number);</span><br><span class="line">ISplitter* splitter2 = <span class="keyword">new</span> TxtSplitter(filePath, number);</span><br><span class="line">ISplitter* splitter3 = <span class="keyword">new</span> PictureSplitter(filePath, number);</span><br><span class="line">ISplitter* splitter4 = <span class="keyword">new</span> VideoSplitter(filePath, number);</span><br></pre></td></tr></table></figure><p>那么根据<strong>依赖倒置原则</strong>：<strong>我们应该依赖抽象，不该依赖实现细节</strong>。可以看到上面的创建实例代码，左边我们定义的是抽象类型，但是右边我们还是要依赖实现细节。我们知道上面代码创建对象我们都使用的<code>new</code>关键字，那么我么如何绕开<code>new</code>，来避免对象创建（new）过程中所导致的紧耦合（依赖具体类），从而支持对象创建的稳定呢？</p><p>我们来定义一个工厂：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SplitterFactory</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ISplitter <span class="title">createSplitter</span><span class="params">(...)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BinarySplitter(...);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建对象</span></span><br><span class="line">... </span><br><span class="line">SplitterFactory factory;</span><br><span class="line">SpliterFactory* sp = factory.createSplitter(...);</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>我们试图以方法的形式创建对象，但是可以发现，还是无法脱离<code>new</code>的 “魔爪” 。我们还是依赖着具体实现… 那怎么办呢？仔细想想，我们上面直接创建对象都是编译时依赖，能不能将它转换成运行时依赖呢？</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ISplitter</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">split</span><span class="params">()</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">virtual</span> ~ISplitter()&#123; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SplitterFactory</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> ISplitter <span class="title">createSplitter</span><span class="params">(...)</span></span>=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">virtual</span> ~SplitterFactory()&#123; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建对象</span></span><br><span class="line">...</span><br><span class="line"><span class="comment">// 我们创建指针</span></span><br><span class="line">SplitterFactory* factory;</span><br><span class="line"><span class="comment">// 真正创建对象时交给未来 (factory)</span></span><br><span class="line">ISplitter* splitter = factory-&gt;createSplitter();</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>针对要创建的具体对象，我们分别定义其生产该类型对象的工厂：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BinarySplitterFactory</span>:</span> <span class="keyword">public</span> SplitterFactory&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> ISplitter <span class="title">createSplitter</span><span class="params">(...)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BinarySplitter();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 其他类和上述相似</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>我们可以看到，每一个具体的类，都有其对应的工厂。那么你看到这里也许很懵，这样解决了我们原先遇到的问题了吗？请继续看下面的代码改进：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainForm</span> :</span> <span class="keyword">public</span> Form &#123;</span><br><span class="line">    SplitterFactory* factory;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 具体要创建对象的工厂是需要传入的，那么我们要什么对象就传该对象的工厂即可</span></span><br><span class="line">    MainForm(SplitterFactory* factory) &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;factory = factory;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Button_Click</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ISplitter* sp = factory-&gt;createSplitter(); <span class="comment">// 多态</span></span><br><span class="line">        sp-&gt;split();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>至此，我们可以看到MainForm中已经极大程度的降低了依赖，我们可以观察里面的所有对象都是抽象的。依赖是不是已经降低了呢？</p><h3 id="要点总结"><a href="#要点总结" class="headerlink" title="要点总结"></a>要点总结</h3><ul><li>Factory Method模式用于隔离类对象的使用者和具体类型之间的 耦合关系。面对一个经常变化的具体类型，紧耦合关系(new)会导 致软件的脆弱。</li><li>Factory Method模式通过面向对象的手法，将所要<strong>创建的具体对 象工作延迟到子类</strong>，从而实现一种扩展（而非更改）的策略，较好地解决了这种紧耦合关系。</li><li>Factory Method模式解决“单个对象”的需求变化。缺点在于要 求创建方法/参数相同。</li></ul>]]></content>
     
     <summary type="html">
     
@@ -250,14 +250,14 @@
     
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://18wanttobesinger.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>桥接模式</title>
-    <link href="http://yoursite.com/2020/06/11/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/06/11/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/11/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/11/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-06-11T08:30:35.000Z</published>
     <updated>2020-06-17T14:57:27.825Z</updated>
     
@@ -271,14 +271,14 @@
     
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://18wanttobesinger.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>装饰者模式</title>
-    <link href="http://yoursite.com/2020/06/10/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/06/10/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/10/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/10/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-06-10T06:17:03.000Z</published>
     <updated>2020-06-17T14:55:57.339Z</updated>
     
@@ -292,14 +292,14 @@
     
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://18wanttobesinger.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>观察者模式</title>
-    <link href="http://yoursite.com/2020/06/08/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/06/08/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/08/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/08/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-06-08T02:16:47.000Z</published>
     <updated>2020-06-17T14:52:34.840Z</updated>
     
@@ -313,14 +313,14 @@
     
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://18wanttobesinger.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>策略模式</title>
-    <link href="http://yoursite.com/2020/06/07/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/06/07/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/07/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/07/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-06-07T09:50:43.000Z</published>
     <updated>2020-06-17T14:54:28.666Z</updated>
     
@@ -334,14 +334,14 @@
     
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://18wanttobesinger.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>牛牛的数列</title>
-    <link href="http://yoursite.com/2020/06/06/%E7%89%9B%E7%89%9B%E7%9A%84%E6%95%B0%E5%88%97/"/>
-    <id>http://yoursite.com/2020/06/06/%E7%89%9B%E7%89%9B%E7%9A%84%E6%95%B0%E5%88%97/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/06/%E7%89%9B%E7%89%9B%E7%9A%84%E6%95%B0%E5%88%97/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/06/%E7%89%9B%E7%89%9B%E7%9A%84%E6%95%B0%E5%88%97/</id>
     <published>2020-06-06T01:15:32.000Z</published>
     <updated>2020-06-22T00:06:28.003Z</updated>
     
@@ -355,16 +355,16 @@
     
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://18wanttobesinger.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="子序列 - 动态规划" scheme="http://yoursite.com/tags/%E5%AD%90%E5%BA%8F%E5%88%97-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <category term="子序列 - 动态规划" scheme="https://18wanttobesinger.github.io/tags/%E5%AD%90%E5%BA%8F%E5%88%97-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
   <entry>
     <title>SpringBoot综合</title>
-    <link href="http://yoursite.com/2020/06/01/SpringBoot%E7%BB%BC%E5%90%88/"/>
-    <id>http://yoursite.com/2020/06/01/SpringBoot%E7%BB%BC%E5%90%88/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/01/SpringBoot%E7%BB%BC%E5%90%88/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/01/SpringBoot%E7%BB%BC%E5%90%88/</id>
     <published>2020-06-01T03:06:01.000Z</published>
     <updated>2020-06-19T11:39:16.992Z</updated>
     
@@ -382,14 +382,14 @@
     
     
     
-      <category term="SpringBoot" scheme="http://yoursite.com/tags/SpringBoot/"/>
+      <category term="SpringBoot" scheme="https://18wanttobesinger.github.io/tags/SpringBoot/"/>
     
   </entry>
   
   <entry>
     <title>搜索旋转排序数组</title>
-    <link href="http://yoursite.com/2020/06/01/%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
-    <id>http://yoursite.com/2020/06/01/%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</id>
+    <link href="https://18wanttobesinger.github.io/2020/06/01/%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
+    <id>https://18wanttobesinger.github.io/2020/06/01/%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</id>
     <published>2020-06-01T00:41:00.000Z</published>
     <updated>2020-06-22T00:05:54.274Z</updated>
     
@@ -403,16 +403,16 @@
     
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://18wanttobesinger.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="二分 - 数组" scheme="http://yoursite.com/tags/%E4%BA%8C%E5%88%86-%E6%95%B0%E7%BB%84/"/>
+      <category term="二分 - 数组" scheme="https://18wanttobesinger.github.io/tags/%E4%BA%8C%E5%88%86-%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
   <entry>
     <title>A+B问题</title>
-    <link href="http://yoursite.com/2020/05/29/A-B%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2020/05/29/A-B%E9%97%AE%E9%A2%98/</id>
+    <link href="https://18wanttobesinger.github.io/2020/05/29/A-B%E9%97%AE%E9%A2%98/"/>
+    <id>https://18wanttobesinger.github.io/2020/05/29/A-B%E9%97%AE%E9%A2%98/</id>
     <published>2020-05-29T14:21:26.000Z</published>
     <updated>2020-06-22T00:07:33.710Z</updated>
     
@@ -426,14 +426,14 @@
     
     
     
-      <category term="位运算 - 算法" scheme="http://yoursite.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97-%E7%AE%97%E6%B3%95/"/>
+      <category term="位运算 - 算法" scheme="https://18wanttobesinger.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97-%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>JVM之类加载机制</title>
-    <link href="http://yoursite.com/2020/05/29/JVM%E4%B9%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/"/>
-    <id>http://yoursite.com/2020/05/29/JVM%E4%B9%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</id>
+    <link href="https://18wanttobesinger.github.io/2020/05/29/JVM%E4%B9%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/"/>
+    <id>https://18wanttobesinger.github.io/2020/05/29/JVM%E4%B9%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</id>
     <published>2020-05-29T03:27:23.000Z</published>
     <updated>2020-06-17T11:17:42.622Z</updated>
     
@@ -447,7 +447,7 @@
     
     
     
-      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+      <category term="JVM" scheme="https://18wanttobesinger.github.io/tags/JVM/"/>
     
   </entry>
   
