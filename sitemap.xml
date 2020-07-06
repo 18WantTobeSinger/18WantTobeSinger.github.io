@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://18wanttobesinger.github.io/2020/05/29/JVM%E4%B9%8BJava%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/</loc>
+    
+    <lastmod>2020-07-06T12:24:50.581Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://18wanttobesinger.github.io/2020/07/06/spring%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
     
     <lastmod>2020-07-06T11:16:59.436Z</lastmod>
@@ -338,7 +345,7 @@
   </url>
   
   <url>
-    <loc>https://18wanttobesinger.github.io/2020/04/21/LeetCode%E5%88%B7%E9%A2%98%E7%BB%8F%E5%8E%86/</loc>
+    <loc>https://18wanttobesinger.github.io/2020/04/21/Java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
     
     <lastmod>2020-06-19T11:43:22.425Z</lastmod>
     
@@ -432,13 +439,6 @@
     <loc>https://18wanttobesinger.github.io/categories/index.html</loc>
     
     <lastmod>2020-06-08T03:34:53.638Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://18wanttobesinger.github.io/2020/05/22/JVM%E4%B9%8BJava%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/</loc>
-    
-    <lastmod>2020-05-29T09:06:34.087Z</lastmod>
     
   </url>
   
