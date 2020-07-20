@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="penghui.club/"/>
-  <updated>2020-07-16T12:36:40.014Z</updated>
+  <updated>2020-07-20T23:36:43.023Z</updated>
   <id>penghui.club/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java的四种访问修饰符</title>
+    <link href="penghui.club/2020/07/21/Java%E7%9A%84%E5%9B%9B%E7%A7%8D%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/"/>
+    <id>penghui.club/2020/07/21/Java%E7%9A%84%E5%9B%9B%E7%A7%8D%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/</id>
+    <published>2020-07-20T23:24:39.000Z</published>
+    <updated>2020-07-20T23:36:43.023Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><p>“今天有没有跟喜欢的人说话。”</p><p> “说了。” </p><p>“说了啥？” </p><p>“说了。你呢？”</p><p> “说了啥”</p><p>​                                                                        —– 网易云热评</p></blockquote><a id="more"></a><h2 id="Java的四种访问修饰符"><a href="#Java的四种访问修饰符" class="headerlink" title="Java的四种访问修饰符"></a>Java的四种访问修饰符</h2><h3 id="访问控制存在的原因："><a href="#访问控制存在的原因：" class="headerlink" title="访问控制存在的原因："></a>访问控制存在的原因：</h3><ul><li><p>让客户端程序员无法触及他们不应该触及的部分 ； </p></li><li><p>允许库设计者可以改变类内部的工作方式而不用担心会影响到客户端程序员</p></li></ul><h3 id="java的四个关键字："><a href="#java的四个关键字：" class="headerlink" title="java的四个关键字："></a>java的四个关键字：</h3><p>​    <code>public、protected、default、private</code></p><p>适用范围&lt;访问权限范围越小，安全性越高&gt;</p><table><thead><tr><th>访问权限</th><th>类</th><th>包</th><th>子类</th><th>其他包</th><th>描述</th></tr></thead><tbody><tr><td>public</td><td>∨</td><td>∨</td><td>∨</td><td>∨</td><td>对任何人都是可用的</td></tr><tr><td>protect</td><td>∨</td><td>∨</td><td>∨</td><td>×</td><td>继承的类可以访问以及和private一样的权限</td></tr><tr><td>default</td><td>∨</td><td>∨</td><td>×</td><td>×</td><td>包访问权限，即在整个包内均可被访问</td></tr><tr><td>private</td><td>∨</td><td>×</td><td>×</td><td>×</td><td>除类型创建者和类型的内部方法之外的任何人都不能访问的元素</td></tr></tbody></table><h4 id="一、public"><a href="#一、public" class="headerlink" title="一、public"></a>一、public</h4><p><strong>（1）定义</strong>：<code>public</code>是公共的，被<code>public</code>所修饰的成员可以在任何类中都能被访问到。</p><p><strong>（2）修饰的成分</strong>：</p><p>​        <code>public</code>能用来修饰类，在一个<code>java</code>源文件中只能有一个类被声明为<code>public</code>，而且一旦有一个类为<code>public</code>，那这个java源文件的文件名就必须要和这个被<code>public</code>所修饰的类的类名相同，否则编译不能通过。说到这里，穿插多一点知识。一个类作为外部类的时候只能被<code>public</code>或者默认访问修饰符所修饰，但是一个类如果作为内部类的时候，则可以被四种访问修饰符所修饰，因为一个类作为内部类的时候，就作为外部类的一个成员属性了，因此可以有四种访问修饰符修饰，这是内部类和外部类的一个区别。</p><p>​        <code>public</code>用来修饰类中成员（变量和方法），被<code>public</code>所修饰的成员可以在任何类中都能被访问到。通过操作该类的对象能随意访问<code>public</code>成员。</p><p>​        <code>public</code>在类的继承上的体现，被<code>public</code>所修饰的成员能被所有的子类继承下来。</p><h4 id="二、protected"><a href="#二、protected" class="headerlink" title="二、protected"></a>二、protected</h4><p><strong>（1）定义</strong>：<code>protected</code>是受保护的，受到该类所在的包所保护。</p><p><strong>（2）作用域</strong>：被<code>protected</code>所修饰的成员会被位于同一<code>package</code>中的所有类访问到。同时，被<code>protected</code>所修饰的成员也能被该类的所有子类继承下来。（注意：这里是指同一个<code>package</code>或者不同的<code>package</code>中的子类都能访问）</p><h4 id="三、default（默认，缺省的）"><a href="#三、default（默认，缺省的）" class="headerlink" title="三、default（默认，缺省的）"></a>三、default（默认，缺省的）</h4><p><strong>（1）定义</strong>：<code>default</code>是友好的，即在成员的前面不写任何的访问修饰符的时候，默认就是友好的。所谓友好的，是对同一<code>package</code>的类友好。</p><p><strong>（2）作用域</strong>：同一<code>package</code>中的所有类都能访问。被<code>friendly</code>所修饰的成员只能被该类所在同一个<code>package</code>中的子类所继承下来。（也就是说只有在同一个<code>package</code>中的子类才能访问到父类中<code>default</code>修饰的成员）</p><h4 id="四、private"><a href="#四、private" class="headerlink" title="四、private"></a>四、private</h4><p><strong>（1）定义</strong>：<code>private</code>是私有的，即只能在当前类中被访问到，它的作用域最小。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;“今天有没有跟喜欢的人说话。”&lt;/p&gt;
+&lt;p&gt; “说了。” &lt;/p&gt;
+&lt;p&gt;“说了啥？” &lt;/p&gt;
+&lt;p&gt;“说了。你呢？”&lt;/p&gt;
+&lt;p&gt; “说了啥”&lt;/p&gt;
+&lt;p&gt;​                                                                        —– 网易云热评&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Java" scheme="penghui.club/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>判断二分图</title>
@@ -449,27 +477,6 @@
     <summary type="html">
     
       倒数第N个字符串
-    
-    </summary>
-    
-    
-    
-      <category term="算法" scheme="penghui.club/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>天梯赛座位分配</title>
-    <link href="penghui.club/2020/06/20/%E5%A4%A9%E6%A2%AF%E8%B5%9B%E5%BA%A7%E4%BD%8D%E5%88%86%E9%85%8D/"/>
-    <id>penghui.club/2020/06/20/%E5%A4%A9%E6%A2%AF%E8%B5%9B%E5%BA%A7%E4%BD%8D%E5%88%86%E9%85%8D/</id>
-    <published>2020-06-20T09:22:38.000Z</published>
-    <updated>2020-06-22T00:02:49.273Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">倒啤酒时上面总有一层泡沫，看似庞大但抿一口全是空气。感情亦是如此。</span><br><span class="line"></span><br><span class="line">                                                                        ----- 网易云热评</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>天梯赛每年有大量参赛队员，要保证同一所学校的所有队员都不能相邻，分配座位就成为一件比较麻烦的事情。为此我们制定如下策略：假设某赛场有 N 所学校参赛，第 i 所学校有 M[i] 支队伍，每队 10 位参赛选手。令每校选手排成一列纵队，第 i+1 队的选手排在第 i 队选手之后。从第 1 所学校开始，各校的第 1 位队员顺次入座，然后是各校的第 2 位队员…… 以此类推。如果最后只剩下 1 所学校的队伍还没有分配座位，则需要安排他们的队员隔位就坐。本题就要求你编写程序，自动为各校生成队员的座位号，从 1 开始编号。</p><h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出参赛的高校数 N （不超过100的正整数）；第二行给出 N 个不超过10的正整数，其中第 i 个数对应第 i 所高校的参赛队伍数，数字间以空格分隔。</p><h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>从第 1 所高校的第 1 支队伍开始，顺次输出队员的座位号。每队占一行，座位号间以 1 个空格分隔，行首尾不得有多余空格。另外，每所高校的第一行按“#X”输出该校的编号X，从 1 开始。</p><h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">3 4 2</span><br></pre></td></tr></table></figure><h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#1</span><br><span class="line">1 4 7 10 13 16 19 22 25 28</span><br><span class="line">31 34 37 40 43 46 49 52 55 58</span><br><span class="line">61 63 65 67 69 71 73 75 77 79</span><br><span class="line">#2</span><br><span class="line">2 5 8 11 14 17 20 23 26 29</span><br><span class="line">32 35 38 41 44 47 50 53 56 59</span><br><span class="line">62 64 66 68 70 72 74 76 78 80</span><br><span class="line">82 84 86 88 90 92 94 96 98 100</span><br><span class="line">#3</span><br><span class="line">3 6 9 12 15 18 21 24 27 30</span><br><span class="line">33 36 39 42 45 48 51 54 57 60</span><br></pre></td></tr></table></figure><h3 id="示例代码："><a href="#示例代码：" class="headerlink" title="示例代码："></a>示例代码：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">int</span> M[n];</span><br><span class="line">    <span class="keyword">int</span> A[<span class="number">105</span>][<span class="number">105</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> maxM = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;M[i]);</span><br><span class="line">        <span class="keyword">if</span> (M[i] &gt; maxM) maxM = M[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">1</span>, preM = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span> * maxM; i ++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j ++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &lt; M[j] * <span class="number">10</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (preM == j) </span><br><span class="line">                    num ++;</span><br><span class="line">                A[j][i] = num ++;</span><br><span class="line">                preM = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"#%d\n"</span>, i + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span> * M[i]; j ++) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d%c"</span>, A[i][j], (j + <span class="number">1</span>) % <span class="number">10</span> == <span class="number">0</span> ? <span class="string">'\n'</span> : <span class="string">' '</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h3 id="今天额外的累😭"><a href="#今天额外的累😭" class="headerlink" title="今天额外的累😭"></a>今天额外的累😭</h3>]]></content>
-    
-    <summary type="html">
-    
-      天梯赛座位分配
     
     </summary>
     
